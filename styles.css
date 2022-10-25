@@ -1,6 +1,163 @@
-.card {
-width: 100px;
-height: 100px;
-margin: 20px;
-background-color: rgb(3, 127, 243);
+.cardflip {
+    margin: 20px;
+        background-color: transparent;
+        width: 50px;
+        height: 80px;
+        border: 1px solid black;
+        perspective: 1000px; 
 }
+.inner-card-flip {
+    position: relative;
+  width: 50px;
+  height: 80px;
+  text-align: center;
+  transition: transform .5s;
+  transform-style: preserve-3d;
+
+}
+.flip-card {
+    transform:rotateY(180deg)
+}
+.card-flip .inner-card-flip {
+cursor:pointer;
+
+}
+.cardFlipFront {
+position: absolute;
+  width: 50px;
+  height: 80px;
+  backface-visibility:hidden; 
+  transform: rotateY(0deg);
+ 
+
+}
+.cardFlipFront {
+    background-color: rgb(187, 238, 238);
+  color: rgb(187, 238, 238);;
+
+
+}
+
+.card {
+
+    background-color:aliceblue;
+
+    width: 50px;
+    height: 80px;
+
+    display:flex;
+    justify-content: center;
+    align-items:center; 
+    backface-visibility:hidden; 
+  transform: rotateY(180deg);
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .card2 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(3, 127, 243); 
+ 
+}
+.card3 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(3, 127, 243); 
+    
+}
+.card4 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(3, 127, 243); 
+   
+}
+.card5 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(3, 127, 243); 
+
+}
+.card6 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(3, 127, 243); 
+  
+}
+.card7 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(3, 127, 243); 
+  
+}
+.card8 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(3, 127, 243); 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card9{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(3, 127, 243); 
+    
+}
+.card10 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(3, 127, 243); 
+} */
