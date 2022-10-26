@@ -9,9 +9,22 @@ function handleclick(evt) {
    //on a card we can check by if the class name includes the card class 
    //or equal to the card class once our user has clicked on a car we can 
    //preform an action on it 
+    //need to flip the card and have it flip back if incorrect
+    //need to set up matches and answers 
+    // need to finish setting up reset button 
+    // Add some css
+
 }
-
-
+let flipClick=document.querySelectorAll(".inner-card-flip")
+flipClick.forEach(flip => {
+   flip.addEventListener("click", () =>{
+        flipOpen(flip) 
+        
+    } ) 
+});
+function flipOpen(evt) {
+    evt.classList.length < 2  ? evt.classList.add('flip-card') : evt.classList.remove('flip-card');
+}
 
 
 

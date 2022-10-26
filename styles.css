@@ -52,6 +52,17 @@ position: absolute;
   transform: rotateY(180deg);
 
  }
+ .page-title {
+    font-weight: normal;
+    text-align: center;
+    font-size: 50px;
+ }
+
+ .box {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 10px ;
+ }
 
 
 
