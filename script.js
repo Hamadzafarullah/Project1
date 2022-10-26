@@ -19,6 +19,7 @@ let flipClick=document.querySelectorAll(".inner-card-flip")
 flipClick.forEach(flip => {
    flip.addEventListener("click", () =>{
         flipOpen(flip) 
+        current(flip)
         
     } ) 
 });
@@ -26,11 +27,25 @@ function flipOpen(evt) {
     evt.classList.length < 2  ? evt.classList.add('flip-card') : evt.classList.remove('flip-card');
 }
 
+//need the computer to know when both cards are
+// clicked to know if the both have the same inner text
 
+let bothCards=[]
 
+let clickedCards=[]
 
+function current(evt){
+    bothCards.push(evt)
+    console.log(bothCards)
+    clickedCards.push(evt.innerText)
+    console.log(clickedCards);
+    if (clickedCards[0] === clickedCards[1]){
+        console.log("matched");
+    }else {
+        console.log("wrong");
+    }
 
-
+}
 
 
 
