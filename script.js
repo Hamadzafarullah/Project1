@@ -39,12 +39,17 @@ function current(evt){
     console.log(bothCards)
     clickedCards.push(evt.innerText)
     console.log(clickedCards);
+    if (clickedCards.length == 2) {
+
+    
     if (clickedCards[0] === clickedCards[1]){
+        clickedCards.length= 0
         console.log("matched");
     }else {
+        clickedCards.length= 0
         console.log("wrong");
     }
-
+    }
 }
 
 
