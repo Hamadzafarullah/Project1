@@ -26,6 +26,11 @@ flipClick.forEach(flip => {
 function flipOpen(evt) {
     evt.classList.length < 2  ? evt.classList.add('flip-card') : evt.classList.remove('flip-card');
 }
+function flipClose(evt) {
+    evt[0].classList.length < 2  ? evt[0].classList.add('flip-card') : evt[0].classList.remove('flip-card');
+
+    evt[1].classList.length < 2  ? evt[1].classList.add('flip-card') : evt[1].classList.remove('flip-card');
+}
 
 //need the computer to know when both cards are
 // clicked to know if the both have the same inner text
@@ -47,6 +52,7 @@ function current(evt){
         console.log("matched");
     }else {
         clickedCards.length= 0
+        flipClose(bothCards)
         console.log("wrong");
     }
     }
