@@ -1,3 +1,11 @@
+body {
+    background-image:url("https://media.tenor.com/FIlAXMHf8vsAAAAd/naruto-background.gif");
+    /* background-position: center; Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+
 .cardflip {
     margin: 20px;
         background-color: transparent;
@@ -32,15 +40,15 @@ position: absolute;
 
 }
 .cardFlipFront {
-    background-color: rgb(187, 238, 238);
-  color: blue;;
+    background-color: rgb(235, 157, 253);
+  color: rgb(235, 157, 253);;
 
 
 }
 
 .card {
 
-    background-color:bisque;
+    background-color:rgb(255, 255, 255);
 
     width: 50px;
     height: 80px;
@@ -53,18 +61,27 @@ position: absolute;
 
  }
  .page-title {
+    font-family: 'Press Start 2P', cursive;
     font-weight: normal;
     text-align: center;
     font-size: 50px;
+    color: rgb(255, 255, 255);
  }
 
  .box {
     display: grid;
     grid-template-columns: repeat(4,auto);
     grid-gap: 10px ;
+    
  }
-
-
+.buttonReset {
+    text-align: center;
+}
+.score {
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+}
 
 
 

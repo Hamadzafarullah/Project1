@@ -1,3 +1,6 @@
+let score= document.querySelector(".score")
+let matches=0;
+
 let getCard= document.querySelectorAll(".card")
 console.log(getCard)
 
@@ -64,6 +67,8 @@ function current(evt){
         clickedCards.length= 0;
         matchedCards.push(bothCards[0])
         matchedCards.push(bothCards[1])
+        matches++;
+        score.innerHTML=`Matches: ${matches}`
         console.log("matched");
         disableCard(matchedCards)
         bothCards=[]
@@ -75,7 +80,12 @@ function current(evt){
     }
     }
 }
-
+let resetButton= document.querySelector("#resetButton")
+function resetGame(){
+    window.location.reload()
+    console.log("resetGame function firing");
+}
+resetButton.addEventListener("click", () => resetGame())
 
 
 
