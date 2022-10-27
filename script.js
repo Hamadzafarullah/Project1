@@ -31,6 +31,17 @@ function flipClose(evt) {
 
     evt[1].classList.length < 2  ? evt[1].classList.add('flip-card') : evt[1].classList.remove('flip-card');
 }
+function slowDown(evt) {
+    setTimeout(() => {
+        flipClose(evt)
+
+    },1000)} 
+function disableCard(matched){
+    for (let i = 0; i < matchedCards.length; i++) {
+        matched[i].style.pointerEvents="none";
+        console.log(matched[i]);
+    }
+}
 
 //need the computer to know when both cards are
 // clicked to know if the both have the same inner text
@@ -38,6 +49,8 @@ function flipClose(evt) {
 let bothCards=[]
 
 let clickedCards=[]
+
+let matchedCards=[]
 
 function current(evt){
     bothCards.push(evt)
@@ -48,12 +61,17 @@ function current(evt){
 
     
     if (clickedCards[0] === clickedCards[1]){
-        clickedCards.length= 0
+        clickedCards.length= 0;
+        matchedCards.push(bothCards[0])
+        matchedCards.push(bothCards[1])
         console.log("matched");
+        disableCard(matchedCards)
+        bothCards=[]
     }else {
-        clickedCards.length= 0
-        flipClose(bothCards)
         console.log("wrong");
+        slowDown(bothCards)
+        bothCards=[]
+        clickedCards.length= 0
     }
     }
 }
